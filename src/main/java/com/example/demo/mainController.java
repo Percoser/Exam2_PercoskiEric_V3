@@ -28,15 +28,5 @@ public class mainController {
 
         return mv;
     }
-    @RequestMapping("/getImageFromBlob/{image}")
-    public void getImageFromBlob(ExpiresFilter.XHttpServletResponse response) throws Exception {
-        response.setContentType("image/jpeg");
-
-        Virus photo = new Virus();
-        Blob blob = photo.getImage();
-        byte[] bytes = blob.getBytes(1, (int) blob.length());
-        InputStream inputStream = new ByteArrayInputStream(bytes);
-        IOUtils.copy(inputStream, response.getOutputStream());
-    }
 
 }

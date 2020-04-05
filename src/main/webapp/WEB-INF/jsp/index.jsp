@@ -44,7 +44,9 @@
             <td>${listitem.symptoms}</td>
             <td>${listitem.duration} days</td>
             <td>${listitem.mortal}%</td>
-            <td>${listitem.image}</td>
+            <td>
+                <img src="${listitem.image}" width="200" height="150"/>
+            </td>
 <%--            <td><img width="200" height="100" src="getImageFromBlob/<c:out value="${listitem.image}"/>></td>--%>
 
 

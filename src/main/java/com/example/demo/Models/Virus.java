@@ -20,13 +20,13 @@ public class Virus {
     public int duration;
     @Column(name = "mortal")
     public double mortal;
-    @Column(name = "image")
-    private Blob image;
+    @Column(name = "imageaddress")
+    private String image;
 
     public Virus() {
     }
 
-    public Virus(String id,String name, String description, String symptoms, int duration, double mortal, Blob image) {
+    public Virus(String id,String name, String description, String symptoms, int duration, double mortal, String image) {
 
         this.id = id;
         this.name = name;
@@ -84,11 +84,8 @@ public class Virus {
         this.mortal = mortal;
     }
 
-    public Blob getImage(){
+    public String getImage(){ return image; }
 
-        return image;
-    }
-
-    public void setImage(Blob image){this.image = image;}
+    public void setImage(String image){this.image = image;}
 
 }
